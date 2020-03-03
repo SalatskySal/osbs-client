@@ -11,30 +11,29 @@ env:
       OS=fedora
       OS_VERSION=29
       PYTHON_VERSION=2
-    - ACTION=bandit
-      OS=fedora
-      OS_VERSION=29
-      PYTHON_VERSION=3
+      ENGINE=docker
     - ACTION=pylint
       OS=fedora
       OS_VERSION=29
       PYTHON_VERSION=2
+      ENGINE=docker
     - ACTION=pylint
       OS=fedora
-      OS_VERSION=29
+      OS_VERSION=31
       PYTHON_VERSION=3
+      ENGINE=docker
     - OS=centos
       OS_VERSION=7
       PYTHON_VERSION=2
-    - OS=fedora
-      OS_VERSION=29
-      PYTHON_VERSION=2
-    - OS=fedora
-      OS_VERSION=29
-      PYTHON_VERSION=3
+      ENGINE=docker
     - OS=fedora
       OS_VERSION=30
       PYTHON_VERSION=3
+      ENGINE=docker
+    - OS=fedora
+      OS_VERSION=31
+      PYTHON_VERSION=3
+      ENGINE=docker
 install:
   - pip install coveralls
 script:
